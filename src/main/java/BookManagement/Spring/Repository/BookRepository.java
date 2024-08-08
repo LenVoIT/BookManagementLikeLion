@@ -9,4 +9,5 @@ import java.util.Iterator;
 @Repository
 public interface BookRepository extends JpaRepository<BookEntity,Integer> {
     Iterable<BookEntity> findAllByOrderByPriceAsc();
+    Iterable<BookEntity> findAllByOrderBySoldQuantityDesc();
 }

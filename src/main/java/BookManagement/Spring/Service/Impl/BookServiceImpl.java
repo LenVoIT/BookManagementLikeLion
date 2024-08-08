@@ -54,4 +54,9 @@ public class BookServiceImpl implements BookService {
     public Iterable<BookEntity> findAllByOrderByPriceAsc() {
         return bookRepository.findAllByOrderByPriceAsc();
     }
+
+    @Override
+    public Iterable<BookEntity> findAllByOrderBySoldQuantityDesc() {
+        return bookRepository.findAllByOrderBySoldQuantityDesc();
+    }
 }

@@ -25,6 +25,8 @@ public class BookEntity extends BaseEntity{
     @Column
     private int quantity;
     @Column
+    private int soldQuantity;
+    @Column
     private BigDecimal price;
     @Column
     private Date releaseDate;

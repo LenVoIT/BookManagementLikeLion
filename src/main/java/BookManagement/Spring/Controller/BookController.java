@@ -9,6 +9,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/api/book")
 @CrossOrigin
@@ -61,5 +63,12 @@ public class BookController {
         return ResponseEntity.status(HttpStatus.OK).body("Sell book(s) succeeded");
     }
 
-//    @GetMapping("/getByPrice")
+    @GetMapping("/sortByPrice")
+    private Iterable<BookEntity> findAllByOrderByPriceAsc(){
+        return bookService.findAllByOrderByPriceAsc();
+    }
+    @GetMapping("/sortBySoldQuantity")
+    private Iterable<BookEntity> findAllByOrderBySoldQuantityAsc(){
+        return bookService.findAllByOrderBySoldQuantityDesc();
+    }
 }

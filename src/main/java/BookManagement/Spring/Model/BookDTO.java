@@ -14,6 +14,7 @@ import java.util.Date;
 public class BookDTO extends BaseDTO {
     private String name;
     private int quantity;
+    private int soldQuantity;
     private int status;
     private BigDecimal price;
     private Date releaseDate;
